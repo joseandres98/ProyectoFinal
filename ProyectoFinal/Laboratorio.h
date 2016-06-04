@@ -10,14 +10,14 @@ class laboratorio : curso
 public:
     //CONSTRUCTORES Y DESTRUCTORES
     Laboratorio();
-    Laboratorio(int,char*);
+    Laboratorio(int,char);
     virtual ~laboratorio();
 
     //FUNCIONES Y METODOS DE ENCAPSULAMIENTO(GETTER Y SETTER)
     void setNumLaboratorio(int);
-    void setInstructor(char*);
+    void setInstructor(char);
     int getNumLaboratorio() const;
-    const char * getInstructor() const;
+    const char getInstructor() const;
     int getDias() const;
 
     //FUNCIONES Y METODOS ESPECIALES
@@ -26,7 +26,7 @@ public:
 private:
     //DECLARACION DE ATRIBUTOS DE LA CLASE DERIVADA
     int numLaboratorio;
-    char * instructor;
+    char instructor;
     static int dias;
 
 };
