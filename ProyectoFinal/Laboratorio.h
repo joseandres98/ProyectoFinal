@@ -26,7 +26,7 @@ public:
 private:
     //DECLARACION DE ATRIBUTOS DE LA CLASE DERIVADA
     int numLaboratorio;
-    char instructor;
+    char instructor [100];
     static int dias;
 
 };
