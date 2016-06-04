@@ -27,7 +27,7 @@ public:
 private:
     //DECLARACION DE ATRIBUTOS DE LA CLASE DERIVADA
     int aula;
-    char * catedratico;
+    char catedratico [100];
     int dias;
 };
 
