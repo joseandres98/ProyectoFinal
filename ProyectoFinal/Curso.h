@@ -23,15 +23,15 @@ class curso
 public:
     //CONSTRUCTORES Y DESTRUCTORES
     Curso();
-    Curso(int,char*,time_t);
+    Curso(int,char,time_t);
     virtual ~curso();
 
     //FUNCIONES Y METODOS DE ENCAPSULAMIENTO(GETTER Y SETTER)
     void setCodigo(int);
-    void setNombre(char*);
+    void setNombre(char);
     void setFecha(time_t);
     int getCodigo() const;
-    const char * getNombre() const;
+    const char  getNombre() const;
     const time_t getFecha() const;
 
     //FUNCIONES Y METODOS ESPECIALES
@@ -42,7 +42,7 @@ public:
 private:
     //DECLARACION DE ATRIBUTOS DE LA CLASE BASE
     int codigo;
-    char* nombre;
+    char nombre [100];
     time_t fecha;
 
     //DECLARACION PARA PODER UTILIZAR LA ESTRUCTURA DE NODOS EN LA CLASE
