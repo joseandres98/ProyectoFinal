@@ -16,7 +16,7 @@ public:
     virtual void toPrint() const;
 private:
     int numLaboratorio;
-    char * instructor;
+    char instructor [50];
     static const int dias = 6;
 };
 
