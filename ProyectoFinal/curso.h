@@ -18,8 +18,8 @@ public:
 
 private:
     int codigo;
-    char * nombre;
-    char * fecha;
+    char nombre [50];
+    char fecha [11];
 };
 
 #endif // CURSO_H
