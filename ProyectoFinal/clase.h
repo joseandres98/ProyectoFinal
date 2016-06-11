@@ -19,7 +19,7 @@ public:
 
 private:
     int aula;
-    char * catedratico;
+    char catedratico [50];
     int dias;
 };
 
