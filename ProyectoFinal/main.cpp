@@ -1,12 +1,11 @@
-#include <iostream>
-#include "Clase.h"
-#include "Curso.h"
-#include "Laboratorio.h"
-using namespace std;
+#include "mainwindow.h"
+#include <QApplication>
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "clase" << endl;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-    return 0;
+    return a.exec();
 }
