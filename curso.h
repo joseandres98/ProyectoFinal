@@ -17,9 +17,6 @@ public:
     int getMatriculados() const;
     virtual void toPrint() const;
     virtual int getCupo();
-    virtual void AgregarCurso(Curso);
-    virtual void Escribir();
-    virtual void Leer();
     void setSiguiente(Curso *);
     Curso * getSiguiente();
     void setAnterior(Curso *);

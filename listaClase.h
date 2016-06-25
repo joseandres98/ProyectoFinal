@@ -1,6 +1,9 @@
 #ifndef listaClase_H
 #define listaClase_H
 #include "Curso.h"
+#include <ostream>
+#include <cstring>
+using namespace std;
 
 class listaClase
 {
@@ -12,8 +15,8 @@ class listaClase
         void insertarAlFinal(Curso *);
         void mostrarLista();
         bool buscarCurso(int);
-        void guardarArchivoAleatorio();
-        void leerArchivoAleatorio();
+        void guardarArchivoAleatorio(string);
+        void leerArchivoAleatorio(string);
         void agregar(Curso *);
 
     protected:

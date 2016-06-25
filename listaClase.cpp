@@ -103,9 +103,9 @@ bool listaClase::buscarCurso(int codigo)
     return false;
 }
 
-void listaClase::guardarArchivoAleatorio()
+void listaClase::guardarArchivoAleatorio(string file)
 {
-    ofstream archivoSalida ("prueba.txt",ios::out|ios::binary);
+    ofstream archivoSalida (file,ios::out|ios::binary);
     Curso *temp1=inicio;
    while(temp1 !=0){
         Clase *temp2 = new Clase(temp1->getCodigo(),temp1->getNombre(),temp1->getMatriculados(),temp1->getFecha(),((Clase*)temp1)->getAula(),((Clase*)temp1)->getCatedratico(),((Clase*)temp1)->getDias());
@@ -116,9 +116,9 @@ void listaClase::guardarArchivoAleatorio()
    archivoSalida.close();
 }
 
-void listaClase::leerArchivoAleatorio()
+void listaClase::leerArchivoAleatorio(string file )
 {
-    ifstream archivoEntrada ("prueba.txt",ios::in | ios::binary);
+    ifstream archivoEntrada (file,ios::in | ios::binary);
     if(!archivoEntrada)
     {
         cout<<"El archivo no existe."<<endl;

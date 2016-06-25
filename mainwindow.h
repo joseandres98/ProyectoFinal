@@ -27,6 +27,8 @@ private slots:
 
     void on_btnCursos_clicked();
 
+    void on_btnMatricular_clicked();
+
 private:
     Ui::MainWindow *ui;
     void UPmantWindow();

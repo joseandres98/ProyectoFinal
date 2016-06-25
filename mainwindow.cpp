@@ -1,4 +1,6 @@
 #include "mainwindow.h"
+#include "listaClase.h"
+#include "listalaboratorio.h"
 #include "ui_mainwindow.h"
 #include "agregarcurso.h"
 #include "mantcurso.h"
@@ -6,6 +8,8 @@
 #include <qfiledialog.h>
 #include <iostream>
 #include <cstring>
+#include <QMessageBox>
+
 using namespace std;
 
 string file;
@@ -39,7 +43,8 @@ void MainWindow::UPmantWindow(){
 }
 
 void MainWindow::on_btnArchivo_clicked()
-{   QStringList filters;
+{
+    QStringList filters;
     filters << "Text Files (*.txt)";
 
     QFileDialog dial(this);
@@ -48,6 +53,23 @@ void MainWindow::on_btnArchivo_clicked()
     dial.show();
 
     file = dial.getOpenFileName().toStdString();
+
+    if(file == "Clase.txt")
+    {
+     listaClase * lista = new listaClase;
+     lista->leerArchivoAleatorio(file);
+    }
+    else{ if(file == "Laboratorio.txt"){
+        ListaLaboratorio * lista = new ListaLaboratorio;
+        lista->leerArchivoAleatorio(file);
+    }else
+        {QMessageBox msg;
+        msg.setText("Archivo de Texto no valido! Ejem.(Clase.txt)(Laboratorio.txt)");
+        msg.exec();
+        on_btnArchivo_clicked();
+        }
+    }
+
 }
 
 void MainWindow::on_btnBuscar_clicked()
@@ -62,4 +84,11 @@ void MainWindow::on_btnCursos_clicked()
     AgregarCurso *frm = new AgregarCurso;
     frm->show();
     frm->setVisible(true);
+}
+
+void MainWindow::on_btnMatricular_clicked()
+{
+    QMessageBox msg;
+    msg.setText("Matriculados Exitosamente!");
+    msg.exec();
 }

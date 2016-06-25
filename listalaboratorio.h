@@ -1,6 +1,9 @@
 #ifndef ListaLaboratorio_H
 #define ListaLaboratorio_H
 #include "Curso.h"
+#include <ostream>
+#include <cstring>
+using namespace std;
 
 class ListaLaboratorio
 {
@@ -12,8 +15,8 @@ class ListaLaboratorio
         void insertarAlFinal(Curso *);
         void mostrarLista();
         Curso * buscarCurso(int);
-        void guardarArchivoAleatorio();
-        void leerArchivoAleatorio();
+        void guardarArchivoAleatorio(string);
+        void leerArchivoAleatorio(string);
         void agregar(Curso *);
 
     protected:
