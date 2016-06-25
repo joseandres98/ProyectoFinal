@@ -6,7 +6,7 @@ class Curso
 {
 public:
     Curso();
-    Curso(int,char*,int,char*);
+    Curso(int,const char*,int,const char*);
     virtual ~Curso();
     void setCodigo(int);
     void setNombre(char*);

@@ -41,7 +41,7 @@ void listaClase::insertarAlInicio(Curso * nuevo)
    }
 }
 
-void listaClase::insertar(int codigo, char * nombre, int matriculados, char* hora, int aula, char * catedratico, int dias)
+void listaClase::insertar(int codigo, const char * nombre, int matriculados,const char* hora, int aula,const char * catedratico, int dias)
 {
     Curso * nuevo= new Clase(codigo,nombre,matriculados,hora,aula,catedratico,dias);
     if(inicio == 0){
@@ -131,7 +131,7 @@ void listaClase::leerArchivoAleatorio(string file )
 
     while(archivoEntrada && !archivoEntrada.eof())
     {
-        //curso->imprimir();
+        //curso->toPri();
         this->insertar(curso.getCodigo(),curso.getNombre(),curso.getMatriculados(),curso.getFecha(),curso.getAula(),curso.getCatedratico(),curso.getDias());
         archivoEntrada.read(reinterpret_cast<char *> (&curso), sizeof(Clase));
 

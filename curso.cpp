@@ -12,14 +12,18 @@ Curso::Curso()
     this->codigo = 0;
     strcpy(this->nombre,"");
     strcpy(this->fecha,"01/01/1999");
+    this->setSiguiente(0);
+    this->setAnterior(0);
 
 }
 
-Curso::Curso(int codigo,char * nombre,int matriculados,char * fecha){
+Curso::Curso(int codigo,const char * nombre,int matriculados,const char * fecha){
     this->codigo = codigo;
     strcpy(this->nombre,nombre);
     this->matriculados = matriculados;
     strcpy(this->fecha,fecha);
+    this->setSiguiente(0);
+    this->setAnterior(0);
 }
 
 Curso::~Curso(){

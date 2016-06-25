@@ -13,7 +13,7 @@ Laboratorio::Laboratorio()
     strcpy(this->instructor,"");
 }
 
-Laboratorio:: Laboratorio(int codigo,char* nombre,int matriculados,char* fecha,int numLaboratorio,char* instructor)
+Laboratorio:: Laboratorio(int codigo,const char* nombre,int matriculados,const char* fecha,int numLaboratorio,const char* instructor)
     : Curso(codigo,nombre,matriculados,fecha){
     this->numLaboratorio = numLaboratorio;
     strcpy(this->instructor,instructor);

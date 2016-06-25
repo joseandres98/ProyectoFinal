@@ -11,7 +11,7 @@ class listaClase
         listaClase();
         virtual ~listaClase();
         void insertarAlInicio(Curso *);
-        void insertar(int, char * const, int, char* const , int, char * const, int);
+        void insertar(int,const char *, int,const char* , int,const char *, int);
         void insertarAlFinal(Curso *);
         void mostrarLista();
         bool buscarCurso(int);

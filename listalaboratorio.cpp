@@ -86,7 +86,7 @@ void ListaLaboratorio::mostrarLista()
 {
     Curso * temp = inicio;
     while(temp !=0){
-        temp->imprimir();
+        temp->toPrint();
         temp = temp->getSiguiente();
     }
 }
@@ -108,7 +108,7 @@ void ListaLaboratorio::guardarArchivoAleatorio(string file)
     ofstream archivoSalida (file,ios::out|ios::binary);
     Curso *temp1=inicio;
    while(temp1 !=0){
-        Laboratorio *temp2 = new Laboratorio(temp1->getCodigo(),temp1->getNombre(),temp1->getMatriculados(),temp1->getHora(),((Laboratorio*)temp1)->getNumLaboratorio(),((Laboratorio*)temp1)->getInstructor());
+        Laboratorio *temp2 = new Laboratorio(temp1->getCodigo(),temp1->getNombre(),temp1->getMatriculados(),temp1->getFecha(),((Laboratorio*)temp1)->getNumLaboratorio(),((Laboratorio*)temp1)->getInstructor());
         archivoSalida.write(reinterpret_cast <const char *> (temp2),sizeof(Laboratorio));
         temp1=temp1->getSiguiente();
         delete temp2;
@@ -132,7 +132,7 @@ void ListaLaboratorio::leerArchivoAleatorio(string file)
     while(archivoEntrada && !archivoEntrada.eof())
     {
         //curso->imprimir();
-        this->insertar(curso.getCodigo(),curso.getNombre(),curso.getMatriculados(),curso.getHora(),curso.getNumLaboratorio(),curso.getInstructor());
+        this->insertar(curso.getCodigo(),curso.getNombre(),curso.getMatriculados(),curso.getFecha(),curso.getNumLaboratorio(),curso.getInstructor());
         archivoEntrada.read(reinterpret_cast<char *> (&curso), sizeof(Laboratorio));
 
     }
