@@ -63,6 +63,7 @@ void MainWindow::on_btnArchivo_clicked()
         ListaLaboratorio * lista = new ListaLaboratorio;
         lista->leerArchivoAleatorio(file);
     }else
+        if(!file.empty())
         {QMessageBox msg;
         msg.setText("Archivo de Texto no valido! Ejem.(Clase.txt)(Laboratorio.txt)");
         msg.exec();
@@ -79,16 +80,24 @@ void MainWindow::on_btnBuscar_clicked()
     frm->setVisible(true);
 }
 
-void MainWindow::on_btnCursos_clicked()
-{
-    AgregarCurso *frm = new AgregarCurso;
-    frm->show();
-    frm->setVisible(true);
-}
 
 void MainWindow::on_btnMatricular_clicked()
 {
     QMessageBox msg;
     msg.setText("Matriculados Exitosamente!");
     msg.exec();
+}
+
+void MainWindow::on_btnClases_clicked()
+{
+    AgregarCurso *frm = new AgregarCurso;
+    frm->show();
+    frm->setVisible(true);
+}
+
+void MainWindow::on_btnManClases_clicked()
+{
+    MantCurso *frm = new MantCurso;
+    frm->show();
+    frm->setVisible(true);
 }

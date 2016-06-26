@@ -26,6 +26,7 @@ private:
     void CursoWindows();
     void ClaseWindows();
     void LabWindows();
+
 };
 
 #endif // MANTCURSO_H

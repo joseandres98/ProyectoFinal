@@ -100,7 +100,7 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>160</x>
      <y>180</y>
      <width>75</width>
      <height>23</height>
@@ -238,6 +238,19 @@
    </property>
    <property name="inputMask">
     <string>##/##/####</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnEliminar">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>180</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Eliminar</string>
    </property>
   </widget>
  </widget>
